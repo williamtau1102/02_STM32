@@ -1,11 +1,24 @@
-{
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+{    
     "version": "0.2.0",
-    "configurations": [      
-        
-        
-        
-    ]
-}
+    "configurations": [            
+        {            
+            "showDevDebugOutput": "parsed",            
+            "cwd": "${workspaceRoot}",            
+            "executable": "${workspaceFolder}/build/WARSHIP_LED.elf",  // 修改文件名            
+            "name": "JLink",            
+            "request": "launch",            
+            "type": "cortex-debug",            
+            "runToEntryPoint": "main",            
+            "servertype": "jlink",            
+            "interface": "swd",            
+            "preLaunchTask": "build",            
+            "device": "stm32f103cet6",  // 修改芯片型号            
+            "svdFile": "STM32F103xx.svd", // 用于查看外设寄存器            
+            "liveWatch": 
+            { // 实时查看变量                
+            "enabled": true,                
+            "samplesPerSecond": 4            
+            },        
+            },          
+            ]
+        }

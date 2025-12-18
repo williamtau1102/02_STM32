@@ -14,4 +14,5 @@
         "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/13.3.1+st.9/bin/arm-none-eabi-gcc.exe",
         "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/13.3.1+st.9/bin/arm-none-eabi-g++.exe"
     ],
+    "cmake.cmakePath": "E:\\ST\\STM32CubeCLT_1.20.0\\CMake\\bin\\cmake.exe",
 }
