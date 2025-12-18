@@ -1,0 +1,41 @@
+{
+    "cmake.environment": {
+        "PATH": "c:/Users/tutr01/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.43.0/resources/cube-cmake/win32;c:\\Users\\tutr01\\.vscode\\extensions\\stmicroelectronics.stm32cube-ide-core-1.1.0\\resources\\binaries\\win32\\x86_64;${env.PATH}"
+    },
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "cmake.setBuildTypeOnMultiConfig": true,
+    "cmake.preferredGenerators": [
+
+    ],
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": {
+                "id": "terminal-cmd"
+            }
+        },
+        "Git Bash": {
+            "path": "C:\\Users\\tutr01\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+            "args": [
+                "--login",
+                "-i"
+            ]
+        }
+    },
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "cmake.generator": "Ninja",
+    "editor.codeActionsOnSave": {
+
+    },
+    "git.openRepositoryInParentFolders": "never",
+    "cmake.cmakePath": "E:\\ST\\STM32CubeCLT_1.20.0\\CMake\\bin\\cmake.exe",
+}

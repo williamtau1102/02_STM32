@@ -1,0 +1,6 @@
+E:/WORK/TTR/Github/02_STM32/00_Code/02_BEEP/WARSHIP_BEEP/build/Debug/CMakeFiles/WARSHIP_BEEP.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/02_BEEP/WARSHIP_BEEP/build/Debug/CMakeFiles/edit_cache.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/02_BEEP/WARSHIP_BEEP/build/Debug/CMakeFiles/rebuild_cache.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/02_BEEP/WARSHIP_BEEP/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/02_BEEP/WARSHIP_BEEP/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/02_BEEP/WARSHIP_BEEP/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
