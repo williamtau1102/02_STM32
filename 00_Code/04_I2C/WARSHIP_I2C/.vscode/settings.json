@@ -1,18 +1,40 @@
 {
-    "cmake.generator": "Ninja",
+    "cmake.cmakePath": "cmake",// 强制指定标准CMake路径，覆盖cube-cmake（核心配置），若标准CMake已添加环境变量，直接填"cmake"；否则填绝对路径
+    // 禁用当前项目的STM32Cube插件自动功能
+    "stm32cube-ide-build-cmake.enableAutoConfigure": false,
+    "stm32cube-ide-build-cmake.autoSetCmakePath": false,
+    // CMake配置阶段的交叉编译环境变量（标准CMake用，替代cube-cmake的自动配置）
+    "cmake.environment": {
+        // 指定ARM GCC交叉编译器前缀（关键：区分系统编译器和ARM交叉编译器）
+        "CC": "arm-none-eabi-gcc",
+        "CXX": "arm-none-eabi-g++",
+        "AS": "arm-none-eabi-as",
+        "AR": "arm-none-eabi-ar",
+        "OBJCOPY": "arm-none-eabi-objcopy",
+        "OBJDUMP": "arm-none-eabi-objdump",
+        "SIZE": "arm-none-eabi-size",
+        // 补充ARM GCC工具链路径（若未全局配置环境变量，需添加）
+        "PATH": "E:\\ST\\STM32CubeCLT_1.20.0\\GNU-tools-for-STM32\\bin;${env:PATH}", // Windows
+        // "PATH": "/usr/local/gcc-arm-none-eabi/bin;${env:PATH}", // Linux/Mac
+        // 编译选项：指定CPU架构、浮点模式（根据你的STM32芯片调整，如STM32F4用-mfloat-abi=hard）
+    },
+    "cmake.generator": "Ninja", // 交叉编译推荐该生成器
     "cmake.buildDirectory": "${workspaceFolder}/build",
-    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
-    "cmake.configureArgs": [
-        "-DCMAKE_COMMAND=cube-cmake"
-    ],
+    "stm32cube-ide-core.autoDetectToolchains": false, // 关闭工具链自动检测，使用手动配置的ARM GCC
+    "stm32cube-ide-core.enableProjectDetection": false, // 关闭自动识别STM32项目，避免自动关联cube-cmake
+    "cmake.buildType": "Debug", // 开发阶段用Debug，发布用Release
+// 屏蔽STM32Cube核心插件的自动配置（避免干扰标准CMake）
+
     "cmake.preferredGenerators": [
         "Ninja"
     ],
-    "stm32cube-ide-clangd.path": "cube",
     "stm32cube-ide-clangd.arguments": [
         "starm-clangd",
         "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/13.3.1+st.9/bin/arm-none-eabi-gcc.exe",
         "--query-driver=${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/13.3.1+st.9/bin/arm-none-eabi-g++.exe"
     ],
-
+    "cmake.configureArgs": [
+        "-DCMAKE_COMMAND=cube-cmake"
+    ],
+    "stm32cube-ide-clangd.path": "cube"
 }

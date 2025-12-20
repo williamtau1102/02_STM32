@@ -1,0 +1,6 @@
+E:/WORK/TTR/Github/02_STM32/00_Code/05_SPI/WARSHIP_SPI/build/Debug/CMakeFiles/WARSHIP_SPI.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/05_SPI/WARSHIP_SPI/build/Debug/CMakeFiles/edit_cache.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/05_SPI/WARSHIP_SPI/build/Debug/CMakeFiles/rebuild_cache.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/05_SPI/WARSHIP_SPI/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/05_SPI/WARSHIP_SPI/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+E:/WORK/TTR/Github/02_STM32/00_Code/05_SPI/WARSHIP_SPI/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
