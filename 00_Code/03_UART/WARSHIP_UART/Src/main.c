@@ -31,6 +31,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include <string.h>   //包含字符串操作函数的头文件
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -105,6 +107,19 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
+
+  uint8_t byteNumber = 0x5a;
+  uint8_t byteArray[] = {1,2,3,4,5};
+  char ch = 'a';
+  char *str = "Hello world";
+
+  HAL_UART_Transmit(&huart1, &byteNumber, 1, HAL_MAX_DELAY);
+
+  HAL_UART_Transmit(&huart1, byteArray, sizeof(byteArray), HAL_MAX_DELAY);
+
+  HAL_UART_Transmit(&huart1, (uint8_t *)&ch, 1, HAL_MAX_DELAY); //需要强制类型转换
+
+  HAL_UART_Transmit(&huart1, (uint8_t *)str, strlen(str), HAL_MAX_DELAY); //需要包含 string.h 头文件
 
   /* USER CODE END 2 */
 
