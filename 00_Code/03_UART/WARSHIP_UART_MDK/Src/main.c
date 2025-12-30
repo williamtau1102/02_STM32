@@ -106,6 +106,11 @@ int main(void)
   MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
 
+  uint8_t byteNmber = 0x5a;
+  uint8_t byteArray[] = {1,2,3,4,5};
+  char ch = 'a';
+  char *str = "Hello, World!";  
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
