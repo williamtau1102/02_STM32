@@ -556,11 +556,11 @@ ARM Macro Assembler    Page 9
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=warship_uart_mdk\startup_stm32f103xe.d -owarship_uart_mdk\startup_
-stm32f103xe.o -I.\RTE\_WARSHIP_UART_MDK -IE:\MDK-ARM\appdata\ARM\CMSIS\6.2.0\CM
-SIS\Core\Include -IE:\MDK-ARM\appdata\Keil\STM32F1xx_DFP\2.4.1\Device\Include -
--predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 543" --predefine
-="STM32F10X_HD SETA 1" --predefine="_RTE_ SETA 1" --list=startup_stm32f103xe.ls
-t startup_stm32f103xe.s
+stm32f103xe.o -I.\RTE\_WARSHIP_UART_MDK -I"D:\Program Files (x86)\Keil\ARM\CMSI
+S\5.7.0\CMSIS\Core\Include" -I"D:\Program Files (x86)\Keil\Keil\STM32F1xx_DFP\2
+.3.0\Device\Include" --predefine="__UVISION_VERSION SETA 533" --predefine="_RTE
+_ SETA 1" --predefine="STM32F10X_HD SETA 1" --predefine="_RTE_ SETA 1" --list=s
+tartup_stm32f103xe.lst startup_stm32f103xe.s
 
 
 
@@ -1457,4 +1457,4 @@ Symbol: __use_two_region_memory
       None
 Comment: __use_two_region_memory unused
 3 symbols
-427 symbols in table
+426 symbols in table

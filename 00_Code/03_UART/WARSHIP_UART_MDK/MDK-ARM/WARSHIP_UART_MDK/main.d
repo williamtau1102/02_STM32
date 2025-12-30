@@ -7,14 +7,14 @@ warship_uart_mdk\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 warship_uart_mdk\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 warship_uart_mdk\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 warship_uart_mdk\main.o: ../Drivers/CMSIS/Include/core_cm3.h
-warship_uart_mdk\main.o: E:\MDK-ARM\ARM\Version 5.06\Bin\..\include\stdint.h
+warship_uart_mdk\main.o: D:\Program Files (x86)\Keil\Core\ARM\ARMCC\Bin\..\include\stdint.h
 warship_uart_mdk\main.o: ../Drivers/CMSIS/Include/cmsis_version.h
 warship_uart_mdk\main.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 warship_uart_mdk\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 warship_uart_mdk\main.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 warship_uart_mdk\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 warship_uart_mdk\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-warship_uart_mdk\main.o: E:\MDK-ARM\ARM\Version 5.06\Bin\..\include\stddef.h
+warship_uart_mdk\main.o: D:\Program Files (x86)\Keil\Core\ARM\ARMCC\Bin\..\include\stddef.h
 warship_uart_mdk\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 warship_uart_mdk\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 warship_uart_mdk\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -48,4 +48,4 @@ warship_uart_mdk\main.o: ../Inc/spi.h
 warship_uart_mdk\main.o: ../Inc/usart.h
 warship_uart_mdk\main.o: ../Inc/usb.h
 warship_uart_mdk\main.o: ../Inc/gpio.h
-warship_uart_mdk\main.o: E:\MDK-ARM\ARM\Version 5.06\Bin\..\include\string.h
+warship_uart_mdk\main.o: D:\Program Files (x86)\Keil\Core\ARM\ARMCC\Bin\..\include\string.h

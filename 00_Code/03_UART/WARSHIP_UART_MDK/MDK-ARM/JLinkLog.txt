@@ -1,0 +1,139 @@
+T49A8 000:497.392   SEGGER J-Link V7.96 Log File
+T49A8 000:497.602   DLL Compiled: Mar  7 2024 16:45:42
+T49A8 000:497.626   Logging started @ 2025-12-30 16:07
+T49A8 000:497.658   Process: D:\Program Files (x86)\Keil\Core\UV4\UV4.exe
+T49A8 000:497.692 - 497.687ms
+T49A8 000:497.721 JLINK_SetWarnOutHandler(...)
+T49A8 000:497.749 - 0.029ms
+T49A8 000:497.779 JLINK_OpenEx(...)
+T49A8 000:522.191   Firmware: J-Link ARM / Flasher ARM V4 compiled Jun 15 2022 11:03:00
+T49A8 000:526.567   Firmware: J-Link ARM / Flasher ARM V4 compiled Jun 15 2022 11:03:00
+T49A8 000:527.339   Decompressing FW timestamp took 509 us
+T49A8 000:533.719   Hardware: V4.00
+T49A8 000:533.951   S/N: 164000406
+T49A8 000:534.083   OEM: SEGGER
+T49A8 000:534.237   Feature(s): JFlash, GDB
+T49A8 000:538.434   Bootloader: (Could not read)
+T49A8 000:542.652   TELNET listener socket opened on port 19021
+T49A8 000:543.385   WEBSRV WEBSRV_Init(): Starting webserver thread(s)
+T49A8 000:544.951   WEBSRV Webserver running on local port 19080
+T49A8 000:546.015   Looking for J-Link GUI Server exe at: D:\Program Files (x86)\Keil\Core\ARM\Segger\JLinkGUIServer.exe
+T49A8 000:546.830   Looking for J-Link GUI Server exe at: D:\Program Files (x86)\JLink_V796\JLinkGUIServer.exe
+T49A8 000:547.060   Forking J-Link GUI Server: D:\Program Files (x86)\JLink_V796\JLinkGUIServer.exe
+T49A8 000:613.638   J-Link GUI Server info: "J-Link GUI server V7.96 "
+T49A8 000:619.102 - 121.309ms returns "O.K."
+T49A8 000:619.183 JLINK_GetEmuCaps()
+T49A8 000:619.218 - 0.030ms returns 0xBFFF7BBF
+T49A8 000:619.252 JLINK_TIF_GetAvailable(...)
+T49A8 000:620.568 - 1.310ms
+T49A8 000:621.055 JLINK_SetErrorOutHandler(...)
+T49A8 000:621.378 - 0.323ms
+T49A8 000:621.834 JLINK_ExecCommand("ProjectFile = "D:\GitHub\02_STM32\00_Code\03_UART\WARSHIP_UART_MDK\MDK-ARM\JLinkSettings.ini"", ...). 
+T49A8 000:681.756   Ref file found at: D:\Program Files (x86)\Keil\Core\ARM\Segger\JLinkDevices.ref
+T49A8 000:681.928   REF file references invalid XML file: D:\Program Files (x86)\JLink_V796\JLinkDevices.xml
+T49A8 000:685.715 - 63.911ms returns 0x00
+T49A8 000:685.790 JLINK_ExecCommand("Device = STM32F103ZE", ...). 
+T49A8 000:686.694   Device "STM32F103ZE" selected.
+T49A8 000:687.513 - 1.647ms returns 0x00
+T49A8 000:687.559 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T49A8 000:687.598 - 0.003ms returns 0x01
+T49A8 000:687.632 JLINK_GetHardwareVersion()
+T49A8 000:687.670 - 0.031ms returns 40000
+T49A8 000:687.705 JLINK_GetDLLVersion()
+T49A8 000:687.737 - 0.031ms returns 79600
+T49A8 000:687.770 JLINK_GetOEMString(...)
+T49A8 000:687.805 JLINK_GetFirmwareString(...)
+T49A8 000:687.837 - 0.032ms
+T49A8 000:687.875 JLINK_GetDLLVersion()
+T49A8 000:687.908 - 0.032ms returns 79600
+T49A8 000:687.942 JLINK_GetCompileDateTime()
+T49A8 000:687.973 - 0.031ms
+T49A8 000:688.010 JLINK_GetFirmwareString(...)
+T49A8 000:688.042 - 0.031ms
+T49A8 000:688.077 JLINK_GetHardwareVersion()
+T49A8 000:688.109 - 0.032ms returns 40000
+T49A8 000:688.144 JLINK_GetSN()
+T49A8 000:688.177 - 0.032ms returns 164000406
+T49A8 000:688.212 JLINK_GetOEMString(...)
+T49A8 000:688.254 JLINK_TIF_Select(JLINKARM_TIF_SWD)
+T49A8 000:691.059 - 2.808ms returns 0x00
+T49A8 000:691.109 JLINK_HasError()
+T49A8 000:691.158 JLINK_SetSpeed(5000)
+T49A8 000:691.820 - 0.664ms
+T49A8 000:692.385 JLINK_HasError()
+T49A8 000:692.432 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)
+T49A8 000:692.465 - 0.033ms returns JLINKARM_RESET_TYPE_NORMAL
+T49A8 000:692.505 JLINK_Reset()
+T49A8 000:693.269   InitTarget() start
+T49A8 000:693.334    J-Link Script File: Executing InitTarget()
+T49A8 000:693.939   SWD selected. Executing JTAG -> SWD switching sequence.
+T49A8 000:699.096   DAP initialized successfully.
+T49A8 000:721.726   InitTarget() end - Took 28.3ms
+T49A8 000:724.056   Found SW-DP with ID 0x1BA01477
+T49A8 000:729.801   DPIDR: 0x1BA01477
+T49A8 000:729.905   CoreSight SoC-400 or earlier
+T49A8 000:729.980   Scanning AP map to find all available APs
+T49A8 000:732.013   AP[1]: Stopped AP scan as end of AP map has been reached
+T49A8 000:732.160   AP[0]: AHB-AP (IDR: 0x14770011)
+T49A8 000:732.367   Iterating through AP map to find AHB-AP to use
+T49A8 000:734.991   AP[0]: Core found
+T49A8 000:735.074   AP[0]: AHB-AP ROM base: 0xE00FF000
+T49A8 000:736.236   CPUID register: 0x411FC231. Implementer code: 0x41 (ARM)
+T49A8 000:736.323   Found Cortex-M3 r1p1, Little endian.
+T49A8 000:737.909   -- Max. mem block: 0x0000A498
+T49A8 000:739.566   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T49A8 000:740.296   CPU_ReadMem(4 bytes @ 0xE0002000)
+T49A8 000:741.049   FPUnit: 6 code (BP) slots and 2 literal slots
+T49A8 000:741.091   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T49A8 000:741.811   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T49A8 000:742.615   CPU_ReadMem(4 bytes @ 0xE0001000)
+T49A8 000:743.229   CPU_WriteMem(4 bytes @ 0xE0001000)
+T49A8 000:743.945   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T49A8 000:744.680   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T49A8 000:745.446   CPU_ReadMem(4 bytes @ 0xE000ED88)
+T49A8 000:746.221   CPU_WriteMem(4 bytes @ 0xE000ED88)
+T49A8 000:746.985   CoreSight components:
+T49A8 000:747.027   ROMTbl[0] @ E00FF000
+T49A8 000:747.063   CPU_ReadMem(64 bytes @ 0xE00FF000)
+T49A8 000:747.997   CPU_ReadMem(32 bytes @ 0xE000EFE0)
+T49A8 000:749.230   [0][0]: E000E000 CID B105E00D PID 001BB000 SCS
+T49A8 000:749.280   CPU_ReadMem(32 bytes @ 0xE0001FE0)
+T49A8 000:749.899   [0][1]: E0001000 CID B105E00D PID 001BB002 DWT
+T49A8 000:749.942   CPU_ReadMem(32 bytes @ 0xE0002FE0)
+T49A8 000:750.656   [0][2]: E0002000 CID B105E00D PID 000BB003 FPB
+T49A8 000:750.702   CPU_ReadMem(32 bytes @ 0xE0000FE0)
+T49A8 000:751.433   [0][3]: E0000000 CID B105E00D PID 001BB001 ITM
+T49A8 000:751.475   CPU_ReadMem(32 bytes @ 0xE0040FE0)
+T49A8 000:752.158   [0][4]: E0040000 CID B105900D PID 001BB923 TPIU-Lite
+T49A8 000:752.200   CPU_ReadMem(32 bytes @ 0xE0041FE0)
+T49A8 000:752.902   [0][5]: E0041000 CID B105900D PID 101BB924 ETM-M3
+T49A8 000:752.992   CPU is running
+T49A8 000:753.029   CPU_WriteMem(4 bytes @ 0xE000EDF0)
+T49A8 000:753.573   CPU is running
+T49A8 000:753.618   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T49A8 000:754.464   Reset: Halt core after reset via DEMCR.VC_CORERESET.
+T49A8 000:755.715   Reset: Reset device via AIRCR.SYSRESETREQ.
+T49A8 000:755.758   CPU is running
+T49A8 000:755.793   CPU_WriteMem(4 bytes @ 0xE000ED0C)
+T49A8 000:811.739   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T49A8 000:812.530   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T49A8 000:816.144   CPU_WriteMem(4 bytes @ 0xE000EDFC)
+T49A8 000:822.845   CPU_ReadMem(4 bytes @ 0xE000EDF0)
+T49A8 000:826.754   CPU_WriteMem(4 bytes @ 0xE0002000)
+T49A8 000:827.806   CPU_ReadMem(4 bytes @ 0xE000EDFC)
+T49A8 000:828.551   CPU_ReadMem(4 bytes @ 0xE0001000)
+T49A8 000:829.236 - 136.730ms
+T49A8 000:829.301 JLINK_GetId()
+T49A8 000:830.025 - 0.722ms returns 0x1BA01477
+T49A8 000:867.467 JLINK_GetFirmwareString(...)
+T49A8 000:867.528 - 0.061ms
+T49A8 008:518.046 JLINK_Close()
+T49A8 008:518.981   OnDisconnectTarget() start
+T49A8 008:519.060    J-Link Script File: Executing OnDisconnectTarget()
+T49A8 008:519.122   CPU_WriteMem(4 bytes @ 0xE0042004)
+T49A8 008:520.543   OnDisconnectTarget() end - Took 1.47ms
+T49A8 008:520.610   CPU_ReadMem(4 bytes @ 0xE0001000)
+T49A8 008:521.730   CPU_WriteMem(4 bytes @ 0xE0001004)
+T49A8 008:551.133 - 33.086ms
+T49A8 008:551.189   
+T49A8 008:551.213   Closed
