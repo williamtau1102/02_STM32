@@ -48,3 +48,4 @@ warship_uart_mdk\main.o: ../Inc/spi.h
 warship_uart_mdk\main.o: ../Inc/usart.h
 warship_uart_mdk\main.o: ../Inc/usb.h
 warship_uart_mdk\main.o: ../Inc/gpio.h
+warship_uart_mdk\main.o: E:\MDK-ARM\ARM\Version 5.06\Bin\..\include\string.h

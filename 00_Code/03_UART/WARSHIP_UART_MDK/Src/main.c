@@ -31,6 +31,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include <string.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,12 +113,28 @@ int main(void)
   char ch = 'a';
   char *str = "Hello, World!";  
 
+  HAL_UART_Transmit(&huart1, &byteNmber, 1, HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart1, byteArray, sizeof(byteArray), HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), HAL_MAX_DELAY);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    uint8_t dataRcvd;
+    HAL_UART_Receive(&huart1, &dataRcvd, 1, HAL_MAX_DELAY);
+    if(dataRcvd == '0')
+    {
+      HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET); // LED1 ON
+    }
+    else if(dataRcvd == '1')
+    {
+      HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_SET); // LED1 OFF
+    }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
