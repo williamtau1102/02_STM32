@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include
+-I.\RTE\_WARSHIP_LED_MDK
+-I"D:\Program Files (x86)\Keil\ARM\CMSIS\5.7.0\CMSIS\Core\Include"
+-I"D:\Program Files (x86)\Keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include"
+-D__UVISION_VERSION="533" -D_RTE_ -DSTM32F10X_HD -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F103xE
+-o warship_led_mdk\main.o --omf_browse warship_led_mdk\main.crf --depend warship_led_mdk\main.d "../Src/main.c"
