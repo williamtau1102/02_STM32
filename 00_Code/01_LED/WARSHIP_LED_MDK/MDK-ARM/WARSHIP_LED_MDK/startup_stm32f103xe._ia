@@ -1,6 +1,0 @@
---cpu Cortex-M3 -g --apcs=interwork 
--I.\RTE\_WARSHIP_LED_MDK
--I"D:\Program Files (x86)\Keil\ARM\CMSIS\5.7.0\CMSIS\Core\Include"
--I"D:\Program Files (x86)\Keil\Keil\STM32F1xx_DFP\2.3.0\Device\Include"
---pd "__UVISION_VERSION SETA 533" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1" --pd "_RTE_ SETA 1"
---list startup_stm32f103xe.lst --xref -o warship_led_mdk\startup_stm32f103xe.o --depend warship_led_mdk\startup_stm32f103xe.d "startup_stm32f103xe.s"
