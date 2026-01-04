@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2026 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -18,21 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "adc.h"
-#include "dac.h"
-#include "i2c.h"
 #include "rtc.h"
-#include "sdio.h"
-#include "spi.h"
 #include "usart.h"
-#include "usb.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 #include <string.h>
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,23 +89,15 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_RTC_Init();
-  MX_ADC1_Init();
-  MX_DAC_Init();
-  MX_I2C1_Init();
-  MX_SDIO_SD_Init();
-  MX_SPI2_Init();
   MX_USART1_UART_Init();
-  MX_USART2_UART_Init();
-  MX_USART3_UART_Init();
-  MX_USB_PCD_Init();
   /* USER CODE BEGIN 2 */
 
-  uint8_t byteNmber = 0x5a;
+  uint8_t byteNumber = 0x5a;
   uint8_t byteArray[] = {1,2,3,4,5};
   char ch = 'a';
-  char *str = "Hello, World!";  
+  char *str = "Hello, World!";
 
-  HAL_UART_Transmit(&huart1, &byteNmber, 1, HAL_MAX_DELAY);
+  HAL_UART_Transmit(&huart1, &byteNumber, 1, HAL_MAX_DELAY);
   
   HAL_UART_Transmit(&huart1, byteArray, sizeof(byteArray), HAL_MAX_DELAY);
   
@@ -127,22 +111,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
- //   uint8_t dataRcvd;
- //   HAL_UART_Receive(&huart1, &dataRcvd, 1, HAL_MAX_DELAY);
- //   if(dataRcvd == '0')
- //   {
- //     HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_RESET); // LED1 ON
- //   }
- //   else if(dataRcvd == '1')
- //   {
- //     HAL_GPIO_WritePin(GPIOE, GPIO_PIN_5, GPIO_PIN_SET); // LED1 OFF
- //   }
-
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-      
-      
   }
   /* USER CODE END 3 */
 }
@@ -186,11 +157,8 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC|RCC_PERIPHCLK_ADC
-                              |RCC_PERIPHCLK_USB;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC;
   PeriphClkInit.RTCClockSelection = RCC_RTCCLKSOURCE_LSI;
-  PeriphClkInit.AdcClockSelection = RCC_ADCPCLK2_DIV4;
-  PeriphClkInit.UsbClockSelection = RCC_USBCLKSOURCE_PLL;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();

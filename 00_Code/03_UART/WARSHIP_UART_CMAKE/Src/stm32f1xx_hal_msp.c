@@ -7,7 +7,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2025 STMicroelectronics.
+  * Copyright (c) 2026 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -72,9 +72,9 @@ void HAL_MspInit(void)
 
   /* System interrupt init*/
 
-  /** ENABLE: Full SWJ (JTAG-DP + SW-DP): Reset State
+  /** NOJTAG: JTAG-DP Disabled and SW-DP Enabled
   */
-  __HAL_AFIO_REMAP_SWJ_ENABLE();
+  __HAL_AFIO_REMAP_SWJ_NOJTAG();
 
   /* USER CODE BEGIN MspInit 1 */
 

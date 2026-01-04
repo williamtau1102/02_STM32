@@ -78,6 +78,39 @@
       ]
     },
     {
+      "name": "jlink-gdbserver",
+      "version": "8.80.0+st.1",
+      "platform": "darwin",
+      "selected_by": [
+        {
+          "name": "jlink-gdbserver",
+          "version": "8.80.0+st.1"
+        }
+      ]
+    },
+    {
+      "name": "jlink-gdbserver",
+      "version": "8.80.0+st.1",
+      "platform": "x86_64-linux",
+      "selected_by": [
+        {
+          "name": "jlink-gdbserver",
+          "version": "8.80.0+st.1"
+        }
+      ]
+    },
+    {
+      "name": "jlink-gdbserver",
+      "version": "8.80.0+st.1",
+      "platform": "x86_64-windows",
+      "selected_by": [
+        {
+          "name": "jlink-gdbserver",
+          "version": "8.80.0+st.1"
+        }
+      ]
+    },
+    {
       "name": "ninja",
       "version": "1.13.1+st.1",
       "platform": "darwin",
@@ -117,7 +150,7 @@
       "selected_by": [
         {
           "name": "st-arm-clangd",
-          "version": "^19.1.2+st.3"
+          "version": "19.1.2+st.3"
         }
       ]
     },
@@ -128,7 +161,7 @@
       "selected_by": [
         {
           "name": "st-arm-clangd",
-          "version": "^19.1.2+st.3"
+          "version": "19.1.2+st.3"
         }
       ]
     },
@@ -139,7 +172,7 @@
       "selected_by": [
         {
           "name": "st-arm-clangd",
-          "version": "^19.1.2+st.3"
+          "version": "19.1.2+st.3"
         }
       ]
     }
