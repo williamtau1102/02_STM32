@@ -111,6 +111,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    uint8_t dataRcvd;
+    HAL_UART_Receive(&huart1, &dataRcvd, 1, HAL_MAX_DELAY);
+
+    if (dataRcvd == '1') {
+      HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+    } else if (dataRcvd == '0') {
+      HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+    }
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
