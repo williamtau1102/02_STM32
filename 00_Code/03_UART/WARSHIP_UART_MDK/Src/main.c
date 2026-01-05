@@ -92,18 +92,18 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  uint8_t byteNumber = 0x5a;
-  uint8_t byteArray[] = {1,2,3,4,5};
-  char ch = 'a';
-  char *str = "Hello, World!";
+  // uint8_t byteNumber = 0x5a;
+  // uint8_t byteArray[] = {1,2,3,4,5};
+  // char ch = 'a';
+  // char *str = "Hello, World!";
 
-  HAL_UART_Transmit(&huart1, &byteNumber, 1, HAL_MAX_DELAY);
+  // HAL_UART_Transmit(&huart1, &byteNumber, 1, HAL_MAX_DELAY);
   
-  HAL_UART_Transmit(&huart1, byteArray, sizeof(byteArray), HAL_MAX_DELAY);
+  // HAL_UART_Transmit(&huart1, byteArray, sizeof(byteArray), HAL_MAX_DELAY);
   
-  HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
+  // HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, HAL_MAX_DELAY);
   
-  HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), HAL_MAX_DELAY);
+  // HAL_UART_Transmit(&huart1, (uint8_t*)str, strlen(str), HAL_MAX_DELAY);
 
   /* USER CODE END 2 */
 
@@ -111,14 +111,17 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    uint8_t dataRcvd;
-    HAL_UART_Receive(&huart1, &dataRcvd, 1, HAL_MAX_DELAY);
+     uint8_t dataRcvd;
+     HAL_UART_Receive(&huart1, &dataRcvd, 1, HAL_MAX_DELAY);
 
-    if (dataRcvd == '1') {
-      HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
-    } else if (dataRcvd == '0') {
-      HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
-    }
+     if (dataRcvd == '0') {
+       HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
+     } else if (dataRcvd == '1') {
+       HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);
+     }
+
+    uint8_t byteNumber = 0x5b;
+    HAL_UART_Transmit(&huart1, &byteNumber, 1, HAL_MAX_DELAY);
 
     /* USER CODE END WHILE */
 

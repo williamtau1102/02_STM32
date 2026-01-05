@@ -1,0 +1,25 @@
+--cpu Cortex-M3
+"warship_key_mdk\startup_stm32f103xe.o"
+"warship_key_mdk\main.o"
+"warship_key_mdk\gpio.o"
+"warship_key_mdk\rtc.o"
+"warship_key_mdk\stm32f1xx_it.o"
+"warship_key_mdk\stm32f1xx_hal_msp.o"
+"warship_key_mdk\stm32f1xx_hal_gpio_ex.o"
+"warship_key_mdk\stm32f1xx_hal_rtc.o"
+"warship_key_mdk\stm32f1xx_hal_rtc_ex.o"
+"warship_key_mdk\stm32f1xx_hal.o"
+"warship_key_mdk\stm32f1xx_hal_rcc.o"
+"warship_key_mdk\stm32f1xx_hal_rcc_ex.o"
+"warship_key_mdk\stm32f1xx_hal_gpio.o"
+"warship_key_mdk\stm32f1xx_hal_dma.o"
+"warship_key_mdk\stm32f1xx_hal_cortex.o"
+"warship_key_mdk\stm32f1xx_hal_pwr.o"
+"warship_key_mdk\stm32f1xx_hal_flash.o"
+"warship_key_mdk\stm32f1xx_hal_flash_ex.o"
+"warship_key_mdk\stm32f1xx_hal_exti.o"
+"warship_key_mdk\system_stm32f1xx.o"
+--strict --scatter "WARSHIP_KEY_MDK\WARSHIP_KEY_MDK.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "WARSHIP_KEY_MDK.map" -o WARSHIP_KEY_MDK\WARSHIP_KEY_MDK.axf
