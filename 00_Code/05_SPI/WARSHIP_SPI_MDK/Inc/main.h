@@ -6,7 +6,7 @@
   *                   This file contains the common defines of the application.
   ******************************************************************************
   * @attention
-  * EEPROM : 24C02 , Read Address : 0xA1 , Write Address : 0xA0
+  *
   * Copyright (c) 2026 STMicroelectronics.
   * All rights reserved.
   *

@@ -1,0 +1,24 @@
+T129FC 003:810.062   SEGGER J-Link V8.16 Log File
+T129FC 003:812.258   DLL Compiled: Feb 26 2025 12:07:26
+T129FC 003:812.302   Logging started @ 2026-01-06 01:39
+T129FC 003:812.333   Process: E:\MDK-ARM\UV4\UV4.exe
+T129FC 003:813.352 - 3812.364ms 
+T129FC 003:813.889 JLINK_SetWarnOutHandler(...)
+T129FC 003:814.023 - 0.608ms 
+T129FC 003:814.079 JLINK_OpenEx(...)
+T129FC 003:822.040   
+  ***** Error: 
+T129FC 003:822.361   Cannot connect to J-Link.
+T129FC 003:824.215 - 10.137ms returns "Cannot connect to J-Link."
+T129FC 003:826.390 
+  ***** Warning: 
+T129FC 003:826.539 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T129FC 003:826.600 JLINK_GetHardwareVersion()
+T129FC 003:829.143   
+  ***** Error: 
+T129FC 003:829.574   Cannot connect to J-Link.
+T129FC 003:829.755 - 3.152ms 
+T129FC 014:617.767 JLINK_Close()
+T129FC 014:618.665 - 0.898ms
+T129FC 014:619.237   
+T129FC 014:619.427   Closed
