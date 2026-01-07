@@ -54,10 +54,59 @@
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 
+static void SaveLEDState(uint8_t led_state);
+static uint8_t LoadLEDState(void);
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+static void SaveLEDState(uint8_t led_state)
+{
+  //1. Send Write Enable command to the SPI flash memory
+  
+  uint8_t writeEnableCmd[] = {0x06}; // Write Enable command
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_RESET); // CS Low
+  HAL_SPI_Transmit(&hspi2, writeEnableCmd, 1, HAL_MAX_DELAY); // Send Write Enable command
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_SET); // CS High
+
+  //2. Send Sector Erase command to the SPI flash memory
+
+  uint8_t sectorEraseCmd[] = {0x20, 0x00, 0x00, 0x00}; // Sector Erase command with address 0x000000
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_RESET); // CS Low
+  HAL_SPI_Transmit(&hspi2, sectorEraseCmd, 4, HAL_MAX_DELAY); // Send Sector Erase command
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_SET); // CS High
+  HAL_Delay(100); // Wait for Sector Erase to take effect
+
+  //3.Send Write Enable command to the SPI flash memory again
+
+  uint8_t pageProgCmd[5]; 
+  pageProgCmd[0] = 0x02; // Page Program command
+  pageProgCmd[1] = 0x00; // Address byte 1
+  pageProgCmd[2] = 0x00; // Address byte 2
+  pageProgCmd[3] = 0x00; // Address byte 3
+  pageProgCmd[4] = led_state; // Data byte to be written
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_RESET); // CS Low
+  HAL_SPI_Transmit(&hspi2, pageProgCmd, 5, HAL_MAX_DELAY); // Send Page Program command
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_SET); // CS High
+
+  //4. Send Page Program command along with address and data to be written
+
+  HAL_Delay(10); // Wait for Page Program to take effect
+}
+
+static uint8_t LoadLEDState(void)
+{
+
+  uint8_t readDataCmd[] = {0x03, 0x00, 0x00, 0x00}; // Read Data command with address 0x000000
+  uint8_t led_state = 0xff;
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_RESET); // CS Low
+  HAL_SPI_Transmit(&hspi2, readDataCmd, 4, HAL_MAX_DELAY); // Send Read Data command
+  HAL_SPI_Receive(&hspi2, &led_state, 1, HAL_MAX_DELAY); // Receive data byte
+  HAL_GPIO_WritePin(SPI2_NSS_GPIO_Port, SPI2_NSS_Pin, GPIO_PIN_SET); // CS High
+  return led_state;
+}
 
 /* USER CODE END 0 */
 
@@ -104,6 +153,16 @@ int main(void)
   uint8_t pre_state = 1, cur_state = 1;
   uint8_t led_state = 0;
 
+  led_state = LoadLEDState();
+  if(led_state == 1)
+  {
+    HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET); //LED0 ON
+  }
+  else
+  {
+    HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET); //LED0 OFF
+  }
+
   while (1)
   {
     pre_state = cur_state;
@@ -119,6 +178,7 @@ int main(void)
 
     if(pre_state != cur_state)
     {
+      HAL_Delay(10); //Debounce delay
       if(cur_state == 0) //Press KEY1
       {
         
@@ -135,6 +195,7 @@ int main(void)
           HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET); //LED0 ON
           led_state = 1;
       }
+        SaveLEDState(led_state);
     }
     /* USER CODE END WHILE */
 

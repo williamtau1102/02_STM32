@@ -1,0 +1,82 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.43.1.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: William Tau
+1
+User-based license: Keil MDK Community (non-commercial free of charge)
+Valid until: Jun 1 2033. Cached until: Jan 12 2026
+ 
+Tool Versions:
+Toolchain:       Keil MDK Community (non-commercial free of charge  Version: 5.43.0.0
+Toolchain Path:  E:\MDK-ARM\ARM\Version 5.06\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.43.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.1.0
+Dialog DLL:      TCM.DLL V1.56.6.0
+ 
+<h2>Project:</h2>
+E:\WORK\TTR\Github\02_STM32\00_Code\05_SPI\WARSHIP_SPI_MDK\MDK-ARM\WARSHIP_SPI_MDK.uvprojx
+Project File Date:  01/07/2026
+
+<h2>Output:</h2>
+*** Warning: The configured compiler version '5.06 update 7 (build 960)' does not support the selected User Based Licensing technology.
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\MDK-ARM\ARM\Version 5.06\Bin'
+Build target 'WARSHIP_SPI_MDK'
+assembling startup_stm32f103xe.s...
+compiling main.c...
+../Src/main.c(212): error:  #65: expected a ";"
+  {
+../Src/main.c(236): warning:  #12-D: parsing restarts here after previous syntax error
+                                |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+../Src/main.c(237): warning:  #111-D: statement is unreachable
+    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+../Src/main.c(237): error:  #20: identifier "RCC_ClkInitStruct" is undefined
+    RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+../Src/main.c(246): error:  #20: identifier "PeriphClkInit" is undefined
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_RTC;
+../Src/main.c: 2 warnings, 3 errors
+compiling rtc.c...
+compiling usart.c...
+compiling i2c.c...
+compiling spi.c...
+compiling stm32f1xx_hal_msp.c...
+compiling stm32f1xx_it.c...
+compiling gpio.c...
+"WARSHIP_SPI_MDK\WARSHIP_SPI_MDK.axf" - 3 Error(s), 2 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.2.0.pack
+                ARM::CMSIS@6.2.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.1
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_WARSHIP_SPI_MDK
+  E:/MDK-ARM/appdata/ARM/CMSIS/6.2.0/CMSIS/Core/Include
+  E:/MDK-ARM/appdata/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.1
+      Include file:  CMSIS/Core/Include/tz_context.h
+Target not created.
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
