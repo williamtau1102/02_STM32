@@ -1,0 +1,47 @@
+T4850C 005:696.398   SEGGER J-Link V8.16 Log File
+T4850C 005:698.401   DLL Compiled: Feb 26 2025 12:07:26
+T4850C 005:698.438   Logging started @ 2026-01-12 08:52
+T4850C 005:698.481   Process: E:\MDK-ARM\UV4\UV4.exe
+T4850C 005:699.927 - 5698.512ms 
+T4850C 005:700.409 JLINK_SetWarnOutHandler(...)
+T4850C 005:700.465 - 0.447ms 
+T4850C 005:700.519 JLINK_OpenEx(...)
+T4850C 005:705.244   
+  ***** Error: 
+T4850C 005:705.381   Cannot connect to J-Link.
+T4850C 005:705.958 - 5.437ms returns "Cannot connect to J-Link."
+T4850C 005:706.396 
+  ***** Warning: 
+T4850C 005:706.468 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T4850C 005:706.534 JLINK_GetHardwareVersion()
+T4850C 005:708.899   
+  ***** Error: 
+T4850C 005:709.451   Cannot connect to J-Link.
+T4850C 005:709.563 - 3.028ms 
+T4850C 007:564.006 JLINK_IsOpen()
+T4850C 007:564.196 - 0.188ms returns 0x00
+T4850C 007:564.260 JLINK_EMU_SelectByUSBSN(SerialNo = 0)
+T4850C 007:564.664 - 0.402ms returns 0xFFFFFFFF
+T4850C 007:564.696 JLINK_EnableLog(...)
+T4850C 007:564.720 - 0.024ms 
+T4850C 007:564.737 JLINK_SetLogFile(...)
+T4850C 007:564.758 - 0.021ms 
+T4850C 007:564.775 JLINK_SetWarnOutHandler(...)
+T4850C 007:564.790 - 0.015ms 
+T4850C 007:564.806 JLINK_OpenEx(...)
+T4850C 007:567.107   
+  ***** Error: 
+T4850C 007:567.162   Cannot connect to J-Link.
+T4850C 007:567.252 - 2.444ms returns "Cannot connect to J-Link."
+T4850C 007:567.710 
+  ***** Warning: 
+T4850C 007:567.759 API Error: API JLINK_GetHardwareVersion function called before JLINKARM_Open()
+T4850C 007:567.785 JLINK_GetHardwareVersion()
+T4850C 007:570.858   
+  ***** Error: 
+T4850C 007:570.950   Cannot connect to J-Link.
+T4850C 007:571.063 - 3.276ms 
+T4850C 013:213.659 JLINK_Close()
+T4850C 013:214.371 - 0.712ms
+T4850C 013:214.847   
+T4850C 013:214.878   Closed
