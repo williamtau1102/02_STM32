@@ -61,14 +61,20 @@ static uint32_t MyGetTick(void);
 static void MyDelay(uint32_t Delay)
 {
   uint32_t expireTime = MyGetTick() + Delay;
-  while (MyGetTick() < expireTime)
-  {
-  }
+  while (MyGetTick() < expireTime);
 }
 
 static uint32_t MyGetTick(void)
 {
   return currentMiliSeconds;
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  if (htim == &htim1)
+  {
+    currentMiliSeconds++;
+  }
 }
 
 /* USER CODE END 0 */
@@ -111,8 +117,15 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  HAL_TIM_Base_Start_IT(&htim1);
+
   while (1)
   {
+    HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);
+    MyDelay(100);
+    HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
+    MyDelay(100);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
