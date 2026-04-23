@@ -17,10 +17,6 @@
       "version": "19.1.2+st.3"
     },
     {
-      "name": "jlink-gdbserver",
-      "version": "8.80.0+st.1"
-    },
-    {
       "name": "programmer",
       "version": "2.22.0+st.1"
     },
